@@ -4,7 +4,10 @@ plugins {
 }
 
 group 'pw.prok.gradle'
-version '0.0.1'
+version '0.0.2-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -24,7 +27,7 @@ pluginBundle {
   tags = ['onesky', 'translation', 'i18n', 'l10n']
 
   plugins {
-    greetingsPlugin {
+    oneskyPlugin {
       id = 'pw.prok.onesky'
       displayName = 'Gradle OneSky plugin'
     }
