@@ -1,0 +1,33 @@
+plugins {
+    id 'groovy'
+    id 'com.gradle.plugin-publish' version '0.9.7'
+}
+
+group 'pw.prok.gradle'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile 'org.asynchttpclient:async-http-client:2.1.0-alpha21'
+    compile 'com.google.code.gson:gson:2.8.1'
+}
+
+pluginBundle {
+  website = 'https://github.com/Prototik/gradle-onesky-plugin'
+  vcsUrl = 'https://github.com/Prototik/gradle-onesky-plugin'
+  description = 'OneSky translation service plugin for java projects'
+  tags = ['onesky', 'translation', 'i18n', 'l10n']
+
+  plugins {
+    greetingsPlugin {
+      id = 'pw.prok.onesky'
+      displayName = 'Gradle OneSky plugin'
+    }
+  }
+}
+
