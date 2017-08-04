@@ -25,7 +25,7 @@ class OneSkyPlugin implements Plugin<Project> {
         pullTask = project.tasks.create 'pullOneSky', PullTask
 
         project.afterEvaluate {
-            def javaConvention = project.convention.getPlugin(JavaPluginConvention)
+            def javaConvention = project.convention.findPlugin(JavaPluginConvention)
             def processResources = project.tasks.findByName(JavaPlugin.PROCESS_RESOURCES_TASK_NAME) as ProcessResources
 
             if (!extension.format)
